@@ -13,16 +13,26 @@ var orm = {
     });
   },
 
-  insertOne: function(table, vals, cb) {
-    var queryString = `INSERT INTO ?? VALUES ?`;
-    connection.query(queryString, [table, vals], function(err, result) {
+  insertOne: function(table, cols, vals, cb) {
+    var queryString = "INSERT INTO ?? (??) VALUES (?)";
+    connection.query(queryString, [table, cols, vals], function(err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
+  },
+
+  updateOne: function(table, col, val, cb) {
+    var queryString = "UPDATE ?? SET ?? = '?'";
+    connection.query(queryString, [table, col, val, cb], function(err, result) {
+      if (err) throw err;
+      cb(result);
+    });
   }
 };
+
+module.exports = orm;
 
 //      * `selectAll()`
 //      * `insertOne()`
