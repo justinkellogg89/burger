@@ -1,3 +1,3 @@
-INSERT INTO burgers (burger_name, devoured) VALUES ('burgera', 0);
-INSERT INTO burgers (burger_name, devoured) VALUES ('burgerb', 0);
-INSERT INTO burgers (burger_name, devoured) VALUES ('burgerc', 0);
+INSERT INTO burgers (name) VALUES ("The Annihilator");
+INSERT INTO burgers (name) VALUES ("The I only eat meat on Fridays");
+INSERT INTO burgers (name, devour) VALUES ("The White Knight", true);
