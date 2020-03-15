@@ -27,7 +27,7 @@ $(function() {
       name: $("#ca")
         .val()
         .trim(),
-      sleepy: $("[name=devour]:checked")
+      devour: $("[name=devour]:checked")
         .val()
         .trim()
     };
